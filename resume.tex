@@ -1,0 +1,228 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,a4paper,roman]{moderncv}      
+
+% modern themes
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\nopagenumbers{}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{fontawesome5}
+\usepackage{lmodern}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+
+\usepackage{import}
+
+\AfterPreamble{\hypersetup{
+		colorlinks=true,
+		linkcolor=blue,
+		urlcolor=blue,
+}}
+\name{Ashish}{Kumar}
+\address{}{}{}
+\newcommand*{\customcventry}[7][.25em]{
+	\begin{tabular}{@{}l} 
+		{\bfseries #4}
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}}
+		{\bfseries #5}
+	\end{tabular} \\
+	\begin{tabular}{@{}l} 
+		{\itshape #3}
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}}
+		{\itshape #2}
+	\end{tabular}
+	\ifx&#7&%
+	\else{\\%
+		\begin{minipage}{\maincolumnwidth}%
+			\small#7%
+	\end{minipage}}\fi%
+	\par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+	%   \vfill\noindent
+	\begin{tabular}{@{}l} 
+		{\bfseries #2}
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}}
+		{\itshape #3}
+	\end{tabular}
+	\ifx&#4&%
+	\else{\\%
+		\begin{minipage}{\maincolumnwidth}%
+			\small#4%
+	\end{minipage}}\fi%
+	\par\addvspace{#1}}
+
+\renewcommand*{\makecvtitle}{
+	\begin{center}
+   {\Huge\bfseries\color{color2} \namefont\color{color1} Ashish Kumar\par}
+	% Email and Phone
+	\vspace{1em}
+	\begin{tabular}{ c c }
+		\emailsymbol\enspace\emaillink{ashishk17395@gmail.com} & \phonesymbol\enspace 9996869554\\
+	\end{tabular}
+   \end{center}
+	\par
+}
+
+\setlength{\tabcolsep}{12pt}
+
+\begin{document}
+	\makecvtitle
+%	\begin{center}
+%		  {\Huge\bfseries\color{firstnamecolor}\@firstname\\@lastname\par}
+	
+%		\begin{tabular}{ c c }
+%			\emailsymbol\enspace ashishk17395@gmail.com &\phonesymbol\enspace 9996869554\\  
+%		\end{tabular}
+%	\end{center}
+	
+	\section{EXPERIENCE}
+	
+		\hspace*{1em} A sincere and dedicated Android developer with 7.5+ years of experience in designing and building mobile applications. Skilled at adapting to different environments, with valuable insights into the workflows of both small startups and large corporations. Technically proficient with a strong focus on problem-solving and learning, while continuously improving interpersonal skills to complement technical expertise.
+		
+	\hfill\break
+	{\customcventry{May 2024 - Dec 2024}{Android Application Developer}{Horigine Consulting}{Bengaluru, Karnataka}{}
+		{\begin{itemize}
+				\item Developed key features for the Walmart app, including social proofing badges to promote Protection Plans and options for managing item replacements.
+				\item Enhanced testing reliability by writing test cases in R2 and utilizing Appium 2.0 for Android automation.		
+			\end{itemize}
+		}
+	}\hfill\break
+	{\customcventry{Jan 2017 - Apr 2021, Aug 2021 - Feb 2024}{Associate Tech Lead}{TechAhead}{Noida, Delhi NCR}{}
+		{\begin{itemize}
+				\item Continuous coordination with offsite team to build and maintain android app.
+				\item App development in \textbf{Kotlin and Java}, using \textbf{MVVM, MVP}
+				\item Apps with excellent exposure in Ecommerce , Social Media and Fitness.
+				\item Applications with Google Map Integration, location services, Social Auth, REST web Services, 
+				FCM, Retrofit, Sqlite, Room Database, Material Design, Koin and Dagger.
+				\item App development on multiple platforms (Android and iOS) using Flutter
+				\item Well versed in process like Scrum, Kanban and other dev tools like CI/CD, Analytics etc.			
+			\end{itemize}
+		}
+	}
+		
+		\section{CORE COMPETENCIES}
+		{\customcvproject{Mobile Technology}{}{Android (SDK): Core Java \& Kotlin}
+			\customcvproject{Database}{}{SQLite, Room Database, GraphQL}
+			\customcvproject{Analytics}{}{Google, Firebase, HockeySDK (C\#), Heap, LogRocket, Snowplow, Datadog}
+			\customcvproject{Versioning}{}{Git, SVN}
+			\customcvproject{Build Tool}{}{Gradle}
+			\customcvproject{Networking Libraries}{}{Retrofit, OkHttp, Apollo GraphQL}
+			\customcvproject{Misc}{}{Slack, JIRA, Trello, BitBucket, GitHub, Gitlab, Teams, Miro, Figma, Fastlane(CI/CD)}
+		}
+		
+		\section{PROJECTS}
+		
+		{\customcvproject{Walmart App}{{\href{https://play.google.com/store/apps/details?id=com.yellowishdev.hyrecarandroid&hl=en&gl=US}{\color{blue}Link}}}
+			{Shopping and delivery app. Convenient pickup, delivery and shipping options make possible to get the order exactly when user wants it, whether shopping online, in-store or on the go.}
+			{\begin{itemize}
+					\item Improved testing reliability through writing comprehensive unit tests and test cases in R2, ensuring compatibility with Android 13.
+					\item Contributed to migrating dashboards from Splunk to OpenObserve, optimizing data visualization and query performance.
+					\item Utilized Looper to automate processes for removing unused CCMs and generating pull requests.
+					\item Collaborated with the post-transactions team to enhance the Walmart app's amends functionality, enabling users to amend their orders post-confirmation.
+				\end{itemize}
+			}
+		}\hfill\break
+		{\customcvproject{HyreCar App}{{\href{https://play.google.com/store/apps/details?id=com.yellowishdev.hyrecarandroid&hl=en&gl=US}{\color{blue}Link}}}
+			{Rideshare and Delivery platform. Specializes in providing rentals to Gig workers. Bought by GetAround.}
+			{\begin{itemize}
+					\item Scanning documents for background check of a registered driver.
+					\item Firebase config for dynamically updating screen content, incorporating Android 13-specific APIs.
+					\item AppAuth for login with Google and Facebook. Apollo GraphQL for all services. RxJava for data flow. Dagger for injection. Complete Kotlin project.
+					\item Managing analytics, crashlytics and app distribution through Firebase using Fastlane. Investigating analytics using Snowplow. 
+					\item Ada chatbot, Salesforce support, Zendesk chat, Mitek for scanning documents, Argyle.
+				\end{itemize}
+			}
+		}\hfill\break
+		{\customcvproject{Parental control App}
+			{{\href{https://play.google.com/store/apps/details?id=com.kidoprotect.app&hl=en_IN&gl=US}{\color{blue}Link}}}
+			{Keeping kids safer online requires more than managing screen time. Features include : Web Supervision, Time Supervision, Location Supervision, App Supervision, Instant Lock etc.}
+			{\begin{itemize}
+					\item Blocking user from uninstalling app using accessibility services and device manager setting.
+					\item Blocking certain page on general browsers using accessibility services and server host.
+					\item NSFW content detection and logging from users gallery using \textbf{Tensor flow model} 
+					\item Custom keyboard and key logging and stopping user from changing the keyboard using accessibility services.
+					\item POC for YouTube APIs
+				\end{itemize}
+			}
+		}
+		\hfill\break
+		{\customcvproject{Swagbucks Apps}{}
+			{\emph{SBAnswer} enables you to earn points called "SB" for answering surveys and for giving your feedback on local shopping visits.\newline \emph{Tada} is the free cash app that gives you real cash back shopping in-store and online and using coupons and coupon codes. }
+			{\begin{itemize}
+					\item Converted and created projects in Kotlin
+					\item Created and used MVVM architecture Kotlin using Coroutines in repositories and Koin for dependency injection
+					\item Worked on Unity to integrate registration and reward system in games.
+					\item Used \textbf{JNI} to plug JARs into C\# scripts in Unity. Used Objective-C to plugin Swift code in Unity with the help of iOS senior developer.
+					\item Marker clustering/dispersal on google map zoom out/in
+					\item Apps:: ShopAtHome, MyPoints, \href{https://play.google.com/store/apps/details?id=com.prodege.SBShop&hl=en_IN&gl=US}{\color{blue} Tada}, \href{https://play.google.com/store/apps/details?id=com.prodege.answer}{\color{blue} SB Answer}
+				\end{itemize}
+			}
+			\hfill\break
+			{\customcvproject{The Healthy Mummy}{\href{https://play.google.com/store/apps/details?id=com.thehealthymummy&hl=en_IN&gl=US}{\color{blue}Link}}
+				{The \emph{HealthyMummy} weight loss plan is family and budget friendly and made for busy mums. With delicious recipes, constant support and fun workouts.}
+				{\begin{itemize}
+						\item Created MVVM architecture with Meteor DB on backend.
+						\item Worked with sockets to sustain live connections to Meteor DB
+					\end{itemize}
+				}
+			}
+			\hfill\break
+			{\customcvproject{Baaz}{\href{https://play.google.com/store/apps/details?id=com.baaz.baazapp}{\color{blue}Link}}
+				{\emph{Baaz} is the Arab Social Media Platform where you can experience the new meaning of social networking with unlimited entertainment.}
+				{\begin{itemize}
+						\item Pioneered first standardized code of MVVM architecture in JAVA with seniors.
+						\item Used Dagger for dependency injection.
+						\item Used Room DB.
+					\end{itemize}
+				}
+				\hfill\break
+				{\customcvproject{Others}{}
+					{\begin{itemize}
+							\item \href{https://play.google.com/store/apps/details?id=org.tradev.com.tradev}{\color{blue}Trade V} and \href{https://play.google.com/store/apps/details?id=org.daypro.com.daypro}{\color{blue}Day Pro} : Used RxJava with MVP
+							\item \href{https://play.google.com/store/apps/details?id=co.haulink.android}{\color{blue}Haulink} : Created in \textbf{Flutter}.
+							\item The Chauffeur : Used paths in map. 
+						\end{itemize}
+					}
+				}
+				\hfill\break
+				\hfill\break
+				\section{EDUCATION}
+				{
+					\customcventry{Radhaur}{Seth Jai Parkash Mukand Lal Institute of Engineering and Technology}{B.Tech Computer Science Engineering}{2017}{}{}
+					\customcventry{Ambala Cantt}{Kendriya Vidyalaya No. 2}{AISSCE (All India Senior Secondary Certificate Examination)}{2012}{}{}
+					\customcventry{Ambala Cantt}{Kendriya Vidyalaya No. 2}{AISSE (All India Secondary School Examination)}{2010}{}{}
+				}
+				
+				\section{ADDITIONAL}
+				\begin{minipage}{\maincolumnwidth}%
+					\small{
+						\begin{itemize}
+							\item Relevant Coursework: Data Structures and Algorithms, Artificial Neural Networks, Information Security, Abstract Algebra, Kotlin Multi-platform
+							\item Programming Languages: Java, Kotlin, Dart, Python, C\#, C++, C
+							\item Hobbies: Reading, Doodling
+							\item Fluent in Hindi and English
+					\end{itemize}}%
+				\end{minipage}%
+				
+			}
+		\end{document}
+		%% end of file `template.tex'.
